@@ -8,7 +8,7 @@
 
 <body>
     <div class="background">
-        <div class="header">
+        <div class="pc-only-view header">
             <div class="header-left-area">
                 <div class="company-name-wrapper">
                     <p class="company-name-text hover-cursor-pointer">책장</p>
@@ -45,6 +45,25 @@
                 </div>
             </div>
         </div>
+        <div class="side-bar-wrapper">
+            <div class="side-bar">
+                dd
+            </div>
+        </div>
+        <div class="mobile-only-view mobile-header">
+            <svg class="menu-side-bar-opener-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <div class="company-name-wrapper">
+                <p class="company-name-text hover-cursor-pointer">책장</p>
+            </div>
+            <svg class="page-search-btn" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+            </svg>
+        </div>
         <div class="slogen-wrapper flex-col-all-center text-color-white background-image-no-repeat-center-cover">
             <div class="slogen-title-text-wrapper flex-col-all-center">
                 <p class="slogen-title-text">
@@ -60,7 +79,9 @@
             </div>
         </div>
         <div class="community-guide-wrapper flex-col-all-center">
-            <p class="community-guide-title-text text-color-point">Shared Reading and Discussion</p>
+            <div class="community-guide-title-wrapper">
+                <p class="community-guide-title-text text-color-point">Shared Reading and Discussion</p>
+            </div>
             <div class="community-guide-detail-text flex-col-all-center">
                 <p>책장에서 함께 읽고 함께 나누는 독후활동,</p>
                 <p>책장과 함께 독서의 매력과 인사이트를 발견해 보세요</p>
@@ -78,10 +99,11 @@
         <div class="recommend-book-wrapper flex-col-all-center">
             <div class="recommend-book-guide-wrapper flex-col-all-center text-color-white">
                 <div>
-                    <p class="recommend-book-guide-text">금주의 <span class="text-bold">추천 도서</span>를 확인해 보세요.</span></p>
+                    <p class="recommend-book-guide-text">금주의 <span class="text-bold mobile-text-bold-no-apply">
+                            추천 도서</span>를 확인해 보세요.</span></p>
                 </div>
-                <div class="recommand-book-title-wrapper">
-                    <p class="recommand-book-title-text text-bold">추천 책장</p>
+                <div class="recommend-book-guide-title-wrapper">
+                    <p class="recommend-book-guide-title-text text-bold">추천 책장</p>
                 </div>
             </div>
             <div>
@@ -95,7 +117,7 @@
                             <p class="recommend-book-title-kr-text">세일즈맨의 죽음</p>
                             <p class="recommend-book-author-kr-text">w. Arthur Miller</p>
                         </div>
-                        <div class="text-color-white recommend-book-story-text-wrapper flex-row">
+                        <div class="pc-only-view text-color-white recommend-book-story-text-wrapper flex-row">
                             <p class="recommend-book-story-text">
                                 30여 년간 세일즈맨으로 일한 윌리 로먼은 주변에서
                                 아무리 자신을 무시해도 그 나름대로 자부심을 갖고
@@ -111,6 +133,12 @@
                     <div class="recommend-book-link-wrapper">
                         <img class="recommend-book-img" alt="책 사진~~~"
                             src="https://cdn.imweb.me/thumbnail/20240410/82c68ab648c61.png">
+                    </div>
+                    <div class="mobile-only-view recommend-book-story-text-mobile-wrapper">
+                        <p class="text-color-white recommend-book-story-text">
+                            30여 년간 세일즈맨으로 일한 윌리 로먼은 주변에서 아무리 자신을 무시해도 그 나름대로 자부심을 갖고 두 아들 비프와 해피의 뒷바라지를 하며 살아왔다. 하지만 나이가
+                            들수록 점점 보수는 낮아지고 궁핍한 생활을 지속하다 결국 회사로부터 해고당하게 된다. 윌리는...
+                        </p>
                     </div>
                 </div>
             </div>
@@ -174,7 +202,7 @@
             <div class="relay-board-guide general-section-padding-left general-section-padding-top">
                 <div class="relay-board-guide-subtitle-wrapper">
                     <p class="relay-board-guide-subtitle-text text-color-sub-color">책장
-                        <span class="text-bold">커뮤니티</span>
+                        <span class="text-bold mobile-text-bold-no-apply">커뮤니티</span>
                     </p>
                 </div>
                 <div class="relay-board-guide-title-wrapper">
@@ -198,7 +226,7 @@
             <img class="unique-transcription-icon" alt="고유 필사 아이콘"
                 src="https://cdn.imweb.me/thumbnail/20240331/b25be75e07bdd.png" />
             <div class="unique-transcription-description-wrapper">
-                <p class="text-color-point">자신만의 고유한
+                <p class="unique-transcription-description-text text-color-point">자신만의 고유한
                     <span class="text-bold">손글씨</span>로 책 구절을 따라 쓰세요
                 </p>
             </div>
@@ -235,6 +263,7 @@
             </div>
 
         </div>
+        <hr class="hr-between-unique-tr-relay-board mobile-only-view" />
         <div class="relay-board flex-col-all-center">
             <div class="relay-board-description-wrapper">
                 <p class="relay-board-description-text text-color-point">
@@ -292,9 +321,7 @@
 
             </div>
         </div>
-        <div
-            class="reading-discussion-wrapper background-image-no-repeat-center-cover general-section-padding-left general-section-padding-top">
-
+        <div class="reading-discussion-wrapper background-image-no-repeat-center-cover general-section-padding-left">
             <div class="reading-discussion-title-wrapper">
                 <p class="reading-discussion-title-text text-color-base">
                     <span class="text-bold">다독러와</span> 함께<br />
@@ -312,13 +339,11 @@
             <div class="footer-company-info-wrapper">
                 <p class="footer-company-info-text">주식회사 책장</p>
                 <p class="footer-company-info-text">서울 강남구 테헤란로 501</p>
-                <p class="footer-company-info-text">E-mail. bookbook123@abc.com | Tel. 02-123-4567</p>
+                <p class="footer-company-info-text pc-only-view">E-mail. bookbook123@abc.com | Tel. 02-123-4567</p>
+
+                <p class="footer-company-info-text mobile-only-view">E-mail. bookbook123@abc.com</p>
+                <p class="footer-company-info-text mobile-only-view">Tel. 02-123-4567</p>
             </div>
-            <div class="footer-icon-wrapper">
-
-
-            </div>
-
         </div>
     </div>
     <script src="script.js"></script>

@@ -4,6 +4,7 @@
     --point-color: rgb(240, 79, 35);
     --translucent-point-color: rgba(240, 79, 35, 0.45);
     --half-white-color: rgba(255, 255, 255, 0.5);
+    --of-base-color: rgb(252, 248, 241);
     --of-white-color: rgb(229, 231, 235);
     --of-point-color: rgb(249, 185, 167);
     --gray-color: rgb(119, 119, 119);
@@ -42,6 +43,11 @@ button {
     transition: 0.3s;
 } */
 
+
+
+.mobile-only-view {
+    display: none;
+}
 
 
 /* 레이아웃 */
@@ -123,7 +129,7 @@ button {
     margin-bottom: 30px;
 }
 
-.recommand-book-title-wrapper {
+.recommend-book-guide-title-wrapper {
     margin-top: 35px;
 }
 
@@ -134,10 +140,6 @@ button {
     gap: 10px;
 }
 
-.recommend-book-title-wrapper > p {
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
 .recommend-book-description-wrapper {
     padding: 85px;
@@ -309,6 +311,11 @@ button {
     gap: 5px;
 }
 
+
+/* .recommend-book-story-text-mobile-wrapper {
+    display: none;
+} */
+
 /*
     버튼
 */
@@ -467,7 +474,7 @@ button {
     margin: 3px;
 }
 
-.recommand-book-title-text {
+.recommend-book-guide-title-text {
     font-size: 47px
 }
 
@@ -481,6 +488,8 @@ button {
     font-weight: 800;
     letter-spacing: 3px;
     background-color: var(--base-color);
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .recommend-book-title-and-author-kr-wrapper {
@@ -687,8 +696,6 @@ button {
 
 }
 
-
-
 .unique-transcription-post-img-1 {
     width: 380px;
     height: 280px;
@@ -744,6 +751,7 @@ button {
 
 .reading-discussion-wrapper {
     height: 470px;
+    padding-top: 130px;
     background-image: url('https://cdn.imweb.me/thumbnail/20240325/adfa938ff7cda.jpg');
 }
 
@@ -767,12 +775,57 @@ button {
 
 
 @media (min-width:320px) and (max-width: 480px) {     
+    .mobile-only-view {
+        display: block;
+    }
+
+    .pc-only-view {
+        display: none;
+    }
+
     .background {
         width: 100%;
     }
     
-    .header {
-        visibility: hidden;
+    .mobile-header {
+        width: 100%;
+        height: 50px;
+
+        background-color: var(--base-color);
+        color: var(--point-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .general-section-padding-left {
+        padding-left: 15px;
+    }
+
+    .general-section-padding-top {
+        padding-top: 60px;
+    }
+
+    .side-bar-wrapper {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.6);
+
+    }
+
+    .side-bar {
+        width: 65%;
+        height: 100%;
+        background-color: var(--of-base-color);
+    }
+
+
+    .company-name-wrapper {
+        padding-top: 5px;
     }
 
     
@@ -794,10 +847,205 @@ button {
         gap: 7px;
     }
 
+    .recommend-book-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    
+    .community-guide-title-wrapper {
+        width: 240px;
+    }
+
+    .community-guide-wrapper {
+        height: 260px;
+        padding-bottom: 30px;
+    }
+
+    .community-button-wrapper {
+        margin-top: 15px;
+    }
+
+    .horizon-block-area {
+        height: 25px;
+    }
+
+    .recommend-book-wrapper {
+        width: 100%;
+        height: 1100px;
+    }
+
+    .recommend-book-content-wrapper {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recommend-book-title-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .recommend-book-story-text-mobile-wrapper {
+        width: 100%;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .recommend-book-description-wrapper {
+        width: 100%;
+        gap: 0px;
+        padding: 0;
+        margin-top: 40px;
+    }
+
+    .recommend-book-guide-title-wrapper {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+
+    
+    .recommend-book-title-and-author-kr-wrapper {
+        align-items: center;
+        gap: 0;
+        margin-top: 15px;
+    }
+
+    .recommend-book-link-wrapper {
+        width: 200px;
+        margin-top: 25px;
+        margin-bottom: 45px;
+    }
+
+    .recommend-book-list-slider {
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+
+    .recommend-book-list-unit-wrapper {
+        margin-left: 3px;
+        margin-right: 3px;
+    } 
+
+    .recommend-book-unit-title-and-author-wrapper {
+        margin-top: 10px;
+    }
+
+    .relay-board-open-notice {
+        height: 340px;
+        background:
+            url('https://cdn.imweb.me/thumbnail/20240402/db19d0a155787.jpg');
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 950px;
+        background-position-y: -73px;
+        /* background-image: url('https://cdn.imweb.me/thumbnail/20240326/0097dcac1308f.jpg'); */
+    }
+
+    .unique-transcription-wrapper {
+        height: 515px;
+    }
+
+    .relay-board-guide-title-wrapper {
+        margin-top: 8px;
+        margin-bottom: 15px;
+    }
+
+    .relay-board-guide-link-button-wrapper {
+        margin-top: 30px;
+    }
+
+    .unique-transcription-post-list {
+        gap: 7px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+    
+    .unique-transcription-description-wrapper {
+        margin-top: 20px;
+        margin-bottom: 25px;
+    }
+
+
+    .unique-transcription-link-button-wrapper {
+        margin-top: 15px;
+        margin-bottom: 30px;
+    }
+
+    .relay-board {
+        height: 1470px;
+        padding-bottom: 70px;
+    }
+
+    .relay-board-post-inner-book-info-wrapper {
+        margin-top: 25px;
+    }
+
+    .relay-board-post-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .relay-board-post {
+        width: 95%;
+        height: 260px;
+        padding: 20px;
+    }
+
+    .relay-board-description-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .relay-board-link-button-wrapper {
+        margin-top: 15px;
+        margin-bottom: 35px;
+    }
+
+    .reading-discussion-wrapper {
+        width: 100%;
+        height: 290px;
+        padding-top: 50px;
+        background-image: url('https://cdn.imweb.me/thumbnail/20240402/f5148c97f43eb.jpg');
+    }
+
+    .reading-discussion-title-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .reading-discussion-arrow-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 90px;
+        padding-top: 60px;
+    }
+
+    .footer-company-info-wrapper {
+        padding-top: 30px;
+        padding-left: 14px;
+    }
 
     /*
         TEXT
     */
+
+    .general-section-title-text {
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .company-name-text {
+        font-size: 22px;
+        letter-spacing: 3px;
+    }
+
+
     .slogen-title-text {
         font-size: 30px;
     }
@@ -810,5 +1058,195 @@ button {
         font-size: 14px;
         
     }
+
+    .community-guide-title-text {
+        font-size: 27px;
+        text-align: center;
+    }
+
+    .community-guide-detail-text {
+        font-size: 14px;
+    }   
+    
+    .community-guide-detail-text > p {
+        margin: 1px;
+    }
+
+    .recommend-book-guide-text {
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .mobile-text-bold-no-apply {
+        font-weight: 400;
+    }
+
+    .recommend-book-guide-title-text {
+        font-size:27px;
+    }
+
+    .recommend-book-title-text {
+        font-size: 25px;
+        letter-spacing: 1px;
+        margin: 0px;
+        padding-left: 7px;
+        padding-right: 7px;
+        text-transform: uppercase;
+    }
+    
+    .recommend-book-title-kr-text, .recommend-book-author-kr-text {
+        font-size: 15px;
+    }
+
+    
+
+    .recommend-book-story-text {
+        font-size: 13px;
+        font-weight: 300;
+        /* letter-spacing: 1px; */
+        width: 100%;
+    }
+
+
+    .recommend-book-title {
+        font-size: 13px;
+        line-height: 18px;
+    }
+
+    .recommend-book-author {
+        font-size: 12px
+    }
+
+    .relay-board-guide-subtitle-text {
+        font-size: 17px;
+    }
+
+    .relay-board-guide-title-text {
+        font-size: 27px;
+        line-height: 37px;
+    }
+
+    .relay-board-guide-description-text {
+        font-size: 13px;
+    }
+
+    .unique-transcription-description-text {
+        font-size: 14px;
+    }
+
+    .relay-board-description-text {
+        font-size: 14px;
+    }
+
+    .relay-board-post-story-text {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .relay-board-post-book-name {
+        font-size: 12px;
+    }
+
+    .relay-board-post-author-name {
+        font-size: 11px;
+    }
+
+    .reading-discussion-title-text {
+        font-size: 25px;
+    }
+
+    .reading-discussion-description-text {
+        font-size: 12px;
+    }
+
+
+
+
+    /* Button */
+    .community-guide-button {
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .community-guide-button-text {
+        font-size: 13px;
+        width: 100%;
+    }
+
+    .relay-board-guide-link-button {
+        font-size: 12px;
+    }
+
+    .small-btn-text {
+        font-size: 12px
+    }
+
+    .button-general-padding {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    } 
+
+
+
+
+    /*  IMG  */
+    .recommend-book-list-img {
+        width: 180px;
+    }
+
+    .unique-transcription-icon {
+        height: 40px;
+    }
+
+    .unique-transcription-post-img-1 {
+        width: calc((100% / 3));   
+        height: 110px;
+        background-image: url("https://cdn.imweb.me/thumbnail/20240326/afe08fe1a7b12.jpg");
+    }
+
+    .unique-transcription-post-img-2 {
+        width: calc((100% / 3));   
+        height: 110px;
+        background-image: url("https://cdn.imweb.me/thumbnail/20240326/c9abd8c709ebd.jpg");
+    }
+
+    .unique-transcription-post-img-3 {
+        width: calc((100% / 3));   
+        height: 110px;
+        background-image: url("https://cdn.imweb.me/thumbnail/20240326/c6708b5a1e03c.jpg");
+    }                   
+
+    .relay-board-post-img {
+        height: 85px;
+    }
+
+    .reading-discussion-arrow-img {
+        width: 60px;
+        /* height: 40px; */
+    }
+
+
+    /* SVG */
+    .menu-side-bar-opener-btn {
+        width: 25px;
+    }
+
+    .page-search-btn {
+        width: 20px;
+    }
+
+
+    /* ETC */
+
+    .hr-between-unique-tr-relay-board {
+        width: 93%;
+        height: 1px;
+        border: 0;
+        background-color: var(--point-color);
+        size: 1px
+    }
+
 
 }

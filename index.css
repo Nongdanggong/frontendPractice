@@ -1,3 +1,52 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 :root {
     --max-background-width: 1350px;
     --base-color: rgb(252, 248, 241);
@@ -123,6 +172,14 @@ button {
     padding-top: 130px;
 }
 
+.slogen-title-text-wrapper {
+    gap: 15px;
+}
+
+.slogen-detail-text-wrapper {
+    gap: 10px;
+}
+
 
 .community-button-wrapper {
     margin-top: 30px;
@@ -130,7 +187,7 @@ button {
 }
 
 .recommend-book-guide-title-wrapper {
-    margin-top: 35px;
+    margin-top: 40px;
 }
 
 
@@ -343,7 +400,7 @@ button {
 }
 
 .relay-board-post-inner-book-info-wrapper {
-    margin-top: 55px;
+    margin-top: 50px;
 }
 
 .reading-discussion-title-wrapper {
@@ -452,19 +509,13 @@ button {
     /* font-weight: 300; */
 }
 
-
-.slogen-title-text > p,
-.slogen-detail-text > p {
-    margin: 5px;
-}
-
-
 .slogen-title-text {
     font-size: 60px;
 }
 
 .slogen-detail-text {
-    font-size: 17.5px
+    font-size: 17.5px;
+    font-weight: 300;
 }
 
 .community-guide-title-text {
@@ -476,11 +527,12 @@ button {
 
 .community-guide-detail-text {
     font-weight: 300;
-    margin-top: 5px;
 }
 
-.community-guide-detail-text > p {
-    margin: 3px;
+.community-guide-detail-wrapper {
+    /* margin: 8px; */
+    margin-top: 15px;
+    gap: 10px;
 }
 
 .recommend-book-guide-title-text {
@@ -497,6 +549,7 @@ button {
     font-weight: 800;
     letter-spacing: 3px;
     background-color: var(--base-color);
+    padding-top: 7px;
     padding-left: 10px;
     padding-right: 10px;
 }
@@ -568,7 +621,8 @@ button {
 }
 
 .reading-discussion-title-text {
-    font-size: 47px
+    font-size: 47px;
+    line-height: 50px;
 }
 
 .reading-discussion-description-text {
@@ -626,8 +680,8 @@ button {
 
 .slogen-wrapper {
     background-color: bisque;
-    height: 530px;
-    gap: 8px;
+    height: 600px;
+    gap: 35px;
     padding-bottom: 50px;
     background-image: url("https://cdn.imweb.me/thumbnail/20240403/d92a764be527d.jpg");
 }
@@ -746,8 +800,8 @@ button {
 
 .relay-board-post {
     width: 20%;
-    max-width: 240px;
-    /* height: 325px; */
+    max-width: 290px;
+    height: 380px;
     padding: 25px;
     padding-top: 45px;
     /* padding-top: 30px;  */
@@ -855,6 +909,7 @@ button {
 
     .slogen-title-text-wrapper {
         align-items: flex-start;
+        gap: 5px;
     }
 
     .slogen-detail-text-wrapper {
@@ -930,7 +985,7 @@ button {
     .recommend-book-title-and-author-kr-wrapper {
         align-items: center;
         gap: 0;
-        margin-top: 15px;
+        margin-top: 20px;
     }
 
     .recommend-book-link-wrapper {
@@ -960,8 +1015,8 @@ button {
 
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 950px;
-        background-position-y: -73px;
+        background-size: 750px;
+        background-position-y: -50px;
         /* background-image: url('https://cdn.imweb.me/thumbnail/20240326/0097dcac1308f.jpg'); */
     }
 
@@ -1005,6 +1060,7 @@ button {
     }
 
     .relay-board-post-list {
+        width: 95%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1012,7 +1068,8 @@ button {
     }
 
     .relay-board-post {
-        width: 95%;
+        width: 100%;
+        max-width: 100%;
         height: 260px;
         padding: 20px;
     }
@@ -1085,8 +1142,10 @@ button {
         font-size: 14px;
     }   
     
-    .community-guide-detail-text > p {
+    .community-guide-detail-wrapper {
         margin: 1px;
+        margin-top: 10px;
+        gap: 5px;
     }
 
     .recommend-book-guide-text {
@@ -1170,6 +1229,7 @@ button {
 
     .reading-discussion-title-text {
         font-size: 25px;
+        line-height: 30px;
     }
 
     .reading-discussion-description-text {

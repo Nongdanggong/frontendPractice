@@ -1,5 +1,5 @@
 :root {
-    --background-width: 1350px;
+    --max-background-width: 1350px;
     --base-color: rgb(252, 248, 241);
     --point-color: rgb(240, 79, 35);
     --translucent-point-color: rgba(240, 79, 35, 0.45);
@@ -54,7 +54,7 @@ button {
 .background {
     overflow: hidden;
     height: 100%;
-    width: var(--background-width);
+    width: 100%;
     margin: 0 auto;
     margin-top: 0px;
     background-color: var(--base-color);
@@ -109,7 +109,7 @@ button {
 
 .reading-discussion-arrow-wrapper {
     display: grid;
-    grid-template-columns: calc(var(--background-width) * 0.835) 100px;
+    grid-template-columns: calc(100% * 0.835) 100px;
     padding-top: 25px;
 }
 
@@ -142,6 +142,7 @@ button {
 
 
 .recommend-book-description-wrapper {
+    width: 70%;
     padding: 85px;
     padding-top: 65px;
     display: flex;
@@ -188,10 +189,18 @@ button {
 }
 
 .unique-transcription-post-list {
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 100%;
     gap: 20px
 }
 
 .relay-board-post-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
     gap:30px
 }
 
@@ -207,7 +216,7 @@ button {
 .header {
     position: fixed;
 
-    width: var(--background-width);
+    width: 100%;
 
     background-color: var(--base-color);
     color: var(--point-color);
@@ -555,6 +564,7 @@ button {
     color: var(--gray-color);
     /* font-weight: 300; */
     font-size: 14px;
+    text-align: center;
 }
 
 .reading-discussion-title-text {
@@ -637,7 +647,9 @@ button {
 
 .recommend-book-content-wrapper {
     height: 500px;
-    width: calc(var(--background-width) *0.90);
+    /* width: calc(100% *0.90); */
+    width: 100%;
+    max-width: var(--max-background-width);
     display: flex;
     justify-content: space-between;
     /* margin-top: 30px; */
@@ -647,7 +659,8 @@ button {
 
 
 .recommend-book-story-text-wrapper {
-    width:620px;
+    width:100%;
+    max-width: 620px;
     color: var(--of-point-color);
     display: flex;
     gap: 30px;
@@ -658,7 +671,8 @@ button {
     flex-direction: column;
     justify-content: center;
     padding-top: 30px;
-    width: 370px;
+    width: 30%;
+    max-width: 370px;
 }
 
 .recommend-book-list-slider {
@@ -697,20 +711,21 @@ button {
 }
 
 .unique-transcription-post-img-1 {
-    width: 380px;
+    width: calc((100% / 3));
+    max-width: 380px;
     height: 280px;
     background-image: url("https://cdn.imweb.me/thumbnail/20240326/afe08fe1a7b12.jpg");
 }
 
 .unique-transcription-post-img-2 {
-    width: 380px;
-    height: 280px;
+    width: calc((100% / 3));
+    max-width: 380px;
     background-image: url("https://cdn.imweb.me/thumbnail/20240326/c9abd8c709ebd.jpg");
 }
 
 .unique-transcription-post-img-3 {
-    width: 380px;
-    height: 280px;
+    width: calc((100% / 3));
+    max-width: 380px;
     background-image: url("https://cdn.imweb.me/thumbnail/20240326/c6708b5a1e03c.jpg");
 }
 
@@ -730,8 +745,9 @@ button {
 
 
 .relay-board-post {
-    width: 240px;
-    height: 325px;
+    width: 20%;
+    max-width: 240px;
+    /* height: 325px; */
     padding: 25px;
     padding-top: 45px;
     /* padding-top: 30px;  */
@@ -774,7 +790,7 @@ button {
 
 
 
-@media (min-width:320px) and (max-width: 480px) {     
+@media (min-width:320px) and (max-width: 960px) {     
     .mobile-only-view {
         display: block;
     }
@@ -848,6 +864,7 @@ button {
     }
 
     .recommend-book-wrapper {
+        width: 100%;
         display: flex;
         align-items: center;
     }

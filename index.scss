@@ -94,10 +94,6 @@ $gray-color: rgb(119, 119, 119);
     align-items: center;
 }
 
-%flex-row {
-    display: flex;
-}
-
 %general-section-padding-left {
     padding-left: 58px;
 }
@@ -119,26 +115,6 @@ $gray-color: rgb(119, 119, 119);
     height: 280px;
 }
 
-// TEXT
-%text-color-point {
-    color: $point-color;
-}
-
-%text-color-white {
-    color: white;
-}
-
-%text-color-base {
-    color: $base-color;
-}
-
-%text-color-of-white-color {
-    color: $of-white-color;
-}
-
-%text-color-of-point-color {
-    color: $of-point-color;
-}
 // Button
 %button-general-padding {
     padding-top: 11px;
@@ -162,7 +138,6 @@ $gray-color: rgb(119, 119, 119);
     transition: 0.5s
 }
 
-
 %btn-solid-point {
     background-color: $point-color;
     color: white;
@@ -180,11 +155,6 @@ $gray-color: rgb(119, 119, 119);
 %small-btn-text {
     font-size:13px;
     letter-spacing: 1px;
-}
-
-// ETC
-%hover-cursor-pointer {
-    cursor: pointer;
 }
 
 /* ****************************
@@ -332,10 +302,6 @@ $gray-color: rgb(119, 119, 119);
 /* ****************************
     Layout
 **************************** */
-
-
-
-
 .background {
     overflow: hidden;
     height: 100%;
@@ -345,13 +311,9 @@ $gray-color: rgb(119, 119, 119);
     background-color: $base-color;
 }
 
-
-
-
-
 .slogen-wrapper {
     @extend %flex-col-all-center;
-    @extend %text-color-white;
+    color: white;
     @extend %background-image-no-repeat-center-cover;
     height: 600px;
     gap: 35px;
@@ -398,7 +360,7 @@ $gray-color: rgb(119, 119, 119);
 
 .recommend-book-guide-wrapper {
     @extend %flex-col-all-center;
-    @extend %text-color-white;
+    color: white;
 }
 
 .recommend-book-guide-title-wrapper {
@@ -406,7 +368,7 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .recommend-book-story-text-wrapper {
-    @extend %flex-row;
+    display: flex;
     width:100%;
     max-width: 620px;
     display: flex;
@@ -414,8 +376,7 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .recommend-book-story-text {
-    @extend %text-color-of-point-color;
-    width: 50%;
+    color: $of-point-color;
     font-size: 15px;
     line-height: 25px;
     display: flex;
@@ -423,13 +384,13 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .recommend-book-list-slider {
-    @extend %flex-row;
+    display: flex;
     height: 35%;
     margin-bottom: 75px;
 }
 
 .recommend-book-title-and-author-kr-wrapper {
-    @extend %text-color-white;
+    color: white;
     display: flex;
     flex-direction: column;
     gap: 7px;
@@ -463,11 +424,11 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .relay-board-description-text {
-    @extend %text-color-point;
+    color: $point-color;
 }
 
 .relay-board-post-list {
-    @extend %flex-row;
+    display: flex;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -490,7 +451,7 @@ $gray-color: rgb(119, 119, 119);
 
 
 .unique-transcription-post-list {
-    @extend %flex-row;
+    display: flex;
     display: flex;
     justify-content: center;
     padding-left: 10px;
@@ -632,7 +593,7 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .translucent-point-color-bg:hover {
-    @extend %hover-cursor-pointer;
+    cursor: pointer;
     opacity: 100%;
     transition: 0.3s;
 }
@@ -644,18 +605,18 @@ $gray-color: rgb(119, 119, 119);
 **************************** */ 
 
 .company-name-text {
-    @extend %hover-cursor-pointer;
+    cursor: pointer;
     font-size: 35px;
     letter-spacing: 8px;
 }
 
 .user-manu-text {
-    @extend %hover-cursor-pointer;
+    cursor: pointer;
     font-size:14px;
 }
 
 .recommend-book-guide-text {
-    @extend %text-color-white;
+    color: white;
     font-weight: 300;
 }
 
@@ -674,7 +635,7 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .community-guide-title-text {
-    @extend %text-color-point;
+    color: $point-color;
     font-size: 40px;
     font-weight:330;
     margin: 10px;
@@ -695,7 +656,7 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .recommend-book-title-text {
-    @extend %text-color-point;
+    color: $point-color;
     font-size: 35px;
     font-weight: 800;
     letter-spacing: 3px;
@@ -727,7 +688,7 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .relay-board-guide-subtitle-text {
-    @extend %text-color-of-white-color;
+    color: $of-white-color;
     font-size: 20px;
 }
 
@@ -738,13 +699,13 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .relay-board-guide-description-text {
-    @extend %text-color-of-white-color;
+    color: $of-white-color;
     font-weight: 300;
     line-height: 25px;
 }
 
 .relay-board-post-story-text {
-    @extend %text-color-point;
+    color: $point-color;
     line-height: 24px;
 }
 
@@ -762,13 +723,13 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .reading-discussion-title-text {
-    @extend %text-color-base;
+    color: $base-color;
     font-size: 47px;
     line-height: 50px;
 }
 
 .reading-discussion-description-text {
-    @extend %text-color-base;
+    color: $base-color;
     font-size: 18px
 }
 
@@ -778,7 +739,7 @@ $gray-color: rgb(119, 119, 119);
 }
 
 .unique-transcription-description-text {
-    @extend %text-color-point;
+    color: $point-color;
 }
 
 .unique-transcription-post-overlay-text {

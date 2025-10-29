@@ -84,10 +84,6 @@ button {
   align-items: center;
 }
 
-.unique-transcription-post-list, .relay-board-post-list, .recommend-book-list-slider, .recommend-book-story-text-wrapper {
-  display: flex;
-}
-
 .reading-discussion-wrapper, .relay-board-guide {
   padding-left: 58px;
 }
@@ -106,26 +102,6 @@ button {
   width: 33.3333333333%;
   max-width: 380px;
   height: 280px;
-}
-
-.unique-transcription-description-text, .relay-board-post-story-text, .recommend-book-title-text, .community-guide-title-text, .relay-board-description-text {
-  color: rgb(240, 79, 35);
-}
-
-.recommend-book-guide-text, .recommend-book-title-and-author-kr-wrapper, .recommend-book-guide-wrapper, .slogen-wrapper {
-  color: white;
-}
-
-.reading-discussion-description-text, .reading-discussion-title-text {
-  color: rgb(252, 248, 241);
-}
-
-.relay-board-guide-description-text, .relay-board-guide-subtitle-text {
-  color: rgb(229, 231, 235);
-}
-
-.recommend-book-story-text {
-  color: rgb(249, 185, 167);
 }
 
 .relay-board-link-button, .unique-transcription-link-button, .relay-board-guide-link-button {
@@ -167,10 +143,6 @@ button {
 .relay-board-link-button, .unique-transcription-link-button {
   font-size: 13px;
   letter-spacing: 1px;
-}
-
-.user-manu-text, .company-name-text, .translucent-point-color-bg:hover {
-  cursor: pointer;
 }
 
 /* ****************************
@@ -314,6 +286,7 @@ button {
 }
 
 .slogen-wrapper {
+  color: white;
   height: 600px;
   gap: 35px;
   padding-bottom: 50px;
@@ -351,11 +324,16 @@ button {
   background-color: rgb(240, 79, 35);
 }
 
+.recommend-book-guide-wrapper {
+  color: white;
+}
+
 .recommend-book-guide-title-wrapper {
   margin-top: 40px;
 }
 
 .recommend-book-story-text-wrapper {
+  display: flex;
   width: 100%;
   max-width: 620px;
   display: flex;
@@ -363,7 +341,7 @@ button {
 }
 
 .recommend-book-story-text {
-  width: 50%;
+  color: rgb(249, 185, 167);
   font-size: 15px;
   line-height: 25px;
   display: flex;
@@ -371,11 +349,13 @@ button {
 }
 
 .recommend-book-list-slider {
+  display: flex;
   height: 35%;
   margin-bottom: 75px;
 }
 
 .recommend-book-title-and-author-kr-wrapper {
+  color: white;
   display: flex;
   flex-direction: column;
   gap: 7px;
@@ -400,7 +380,12 @@ button {
   color: white;
 }
 
+.relay-board-description-text {
+  color: rgb(240, 79, 35);
+}
+
 .relay-board-post-list {
+  display: flex;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -418,6 +403,7 @@ button {
 }
 
 .unique-transcription-post-list {
+  display: flex;
   display: flex;
   justify-content: center;
   padding-left: 10px;
@@ -547,6 +533,7 @@ button {
 }
 
 .translucent-point-color-bg:hover {
+  cursor: pointer;
   opacity: 100%;
   transition: 0.3s;
 }
@@ -555,15 +542,18 @@ button {
     Text
 **************************** */
 .company-name-text {
+  cursor: pointer;
   font-size: 35px;
   letter-spacing: 8px;
 }
 
 .user-manu-text {
+  cursor: pointer;
   font-size: 14px;
 }
 
 .recommend-book-guide-text {
+  color: white;
   font-weight: 300;
 }
 
@@ -582,6 +572,7 @@ button {
 }
 
 .community-guide-title-text {
+  color: rgb(240, 79, 35);
   font-size: 40px;
   font-weight: 330;
   margin: 10px;
@@ -601,6 +592,7 @@ button {
 }
 
 .recommend-book-title-text {
+  color: rgb(240, 79, 35);
   font-size: 35px;
   font-weight: 800;
   letter-spacing: 3px;
@@ -628,6 +620,7 @@ button {
 }
 
 .relay-board-guide-subtitle-text {
+  color: rgb(229, 231, 235);
   font-size: 20px;
 }
 
@@ -638,11 +631,13 @@ button {
 }
 
 .relay-board-guide-description-text {
+  color: rgb(229, 231, 235);
   font-weight: 300;
   line-height: 25px;
 }
 
 .relay-board-post-story-text {
+  color: rgb(240, 79, 35);
   line-height: 24px;
 }
 
@@ -660,16 +655,22 @@ button {
 }
 
 .reading-discussion-title-text {
+  color: rgb(252, 248, 241);
   font-size: 47px;
   line-height: 50px;
 }
 
 .reading-discussion-description-text {
+  color: rgb(252, 248, 241);
   font-size: 18px;
 }
 
 .community-guide-button-text {
   font-size: 16px;
+}
+
+.unique-transcription-description-text {
+  color: rgb(240, 79, 35);
 }
 
 .unique-transcription-post-overlay-text {

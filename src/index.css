@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-floral-white: rgb(252, 248, 241);
+  --color-point: rgb(240, 79, 35);
+  --color-translucent-point: rgba(240, 79, 35, 0.45);
+  --color-translucent-white: rgba(255, 255, 255, 0.5);
+  --color-of-white: rgb(229, 231, 235);
+  --color-of-point: rgb(249, 185, 167);
+  --color-gray: rgb(119, 119, 119);
+}

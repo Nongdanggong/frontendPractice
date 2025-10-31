@@ -1,21 +1,89 @@
-@charset "UTF-8";
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -23,31 +91,38 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
-
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
-
 body {
   line-height: 1;
 }
-
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
-
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -56,7 +131,10 @@ table {
 /* ****************************
     Custom Initilize
 **************************** */
-*, *::before, *::after {
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -71,76 +149,92 @@ button {
 /* ****************************
     Global variable
 **************************** */
+
+$max-background-width: 1350px;
+
+$base-color: rgb(252, 248, 241);
+$point-color: rgb(240, 79, 35);
+$translucent-point-color: rgba(240, 79, 35, 0.45);
+$half-white-color: rgba(255, 255, 255, 0.5);
+$of-white-color: rgb(229, 231, 235);
+$of-point-color: rgb(249, 185, 167);
+$gray-color: rgb(119, 119, 119);
+
 /* ****************************
     Global Mixin
 **************************** */
+
 /* ****************************
     Global Extend
 **************************** */
-.relay-board-post-inner-book-info-wrapper, .relay-board, .unique-transcription-wrapper, .recommend-book-guide-wrapper, .recommend-book-wrapper, .community-guide-detail-wrapper, .community-guide-wrapper, .slogen-detail-text-wrapper, .slogen-title-text-wrapper, .slogen-wrapper {
+
+// Layout
+%flex-col-all-center {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.reading-discussion-wrapper, .relay-board-guide {
+%general-section-padding-left {
   padding-left: 58px;
 }
 
-.relay-board-guide {
+%general-section-padding-top {
   padding-top: 130px;
 }
 
-.unique-transcription-post-img-3, .unique-transcription-post-img-2, .unique-transcription-post-img-1, .reading-discussion-wrapper, .relay-board-open-notice, .slogen-wrapper {
+// Background
+%background-image-no-repeat-center-cover {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.unique-transcription-post-img-3, .unique-transcription-post-img-2, .unique-transcription-post-img-1 {
-  width: 33.3333333333%;
+%unique-transcription-post {
+  width: calc((100% / 3));
   max-width: 380px;
   height: 280px;
 }
 
-.relay-board-link-button, .unique-transcription-link-button, .relay-board-guide-link-button {
+// Button
+%button-general-padding {
   padding-top: 11px;
   padding-bottom: 11px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
-.relay-board-link-button, .unique-transcription-link-button, .community-guide-button {
+%btn-ghost-point {
   background-color: transparent;
-  color: rgb(240, 79, 35);
-  border-color: rgb(240, 79, 35);
+  color: $point-color;
+  border-color: $point-color;
   border-width: thin;
   border-radius: 2px;
 }
 
-.relay-board-link-button:hover, .unique-transcription-link-button:hover, .community-guide-button:hover {
+%btn-ghost-point:hover {
   cursor: pointer;
-  background-color: rgb(240, 79, 35);
-  color: rgb(252, 248, 241);
+  background-color: $point-color;
+  color: $base-color;
   transition: 0.5s;
 }
 
-.relay-board-guide-link-button {
-  background-color: rgb(240, 79, 35);
+%btn-solid-point {
+  background-color: $point-color;
   color: white;
   border-color: transparent;
   border-width: thin;
 }
 
-.relay-board-guide-link-button:hover {
+%btn-solid-point:hover {
   cursor: pointer;
   background-color: transparent;
   transition: 0.5s;
   border-color: white;
 }
 
-.relay-board-link-button, .unique-transcription-link-button {
+%small-btn-text {
   font-size: 13px;
   letter-spacing: 1px;
 }
@@ -148,6 +242,7 @@ button {
 /* ****************************
     JS 가 통제하는 class 
 **************************** */
+
 .active {
   opacity: 1;
 }
@@ -155,6 +250,7 @@ button {
 /* ****************************
     Utility class 
 **************************** */
+
 .mobile-only-view {
   display: none;
 }
@@ -169,11 +265,11 @@ button {
 }
 
 .basic-color-area {
-  background-color: rgb(229, 231, 235);
+  background-color: $of-white-color;
 }
 
 .point-color-area {
-  background-color: rgb(240, 79, 35);
+  background-color: $point-color;
 }
 
 .general-section-title-text {
@@ -190,12 +286,15 @@ button {
 **************************** */
 .header {
   position: fixed;
+
   width: 100%;
-  background-color: rgb(252, 248, 241);
-  color: rgb(240, 79, 35);
+
+  background-color: $base-color;
+  color: $point-color;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   padding: 20px;
   padding-left: 30px;
   padding-right: 25px;
@@ -227,12 +326,15 @@ button {
 .sub-menu-wrapper {
   position: absolute;
   cursor: pointer;
+
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+
   top: 30px;
   left: 0;
   right: 0;
+
   background-color: white;
   width: 180px;
   box-shadow: 1px 1px 15px -10px rgb(192, 192, 192);
@@ -250,7 +352,7 @@ button {
 }
 
 .sub-menu-unit:hover {
-  background-color: rgb(240, 79, 35);
+  background-color: $point-color;
   transition: 0.4s;
   color: white;
 }
@@ -262,7 +364,7 @@ button {
 
 .footer {
   height: 150px;
-  background-color: rgb(240, 79, 35);
+  background-color: $point-color;
 }
 
 .footer-company-info-wrapper {
@@ -282,11 +384,13 @@ button {
   width: 100%;
   margin: 0 auto;
   margin-top: 0px;
-  background-color: rgb(252, 248, 241);
+  background-color: $base-color;
 }
 
 .slogen-wrapper {
+  @extend %flex-col-all-center;
   color: white;
+  @extend %background-image-no-repeat-center-cover;
   height: 600px;
   gap: 35px;
   padding-bottom: 50px;
@@ -294,22 +398,27 @@ button {
 }
 
 .slogen-title-text-wrapper {
+  @extend %flex-col-all-center;
   gap: 15px;
 }
 
 .slogen-title-text-wrapper {
+  @extend %flex-col-all-center;
   gap: 15px;
 }
 
 .slogen-detail-text-wrapper {
+  @extend %flex-col-all-center;
   gap: 10px;
 }
 
 .community-guide-wrapper {
+  @extend %flex-col-all-center;
   height: 375px;
 }
 
 .community-guide-detail-wrapper {
+  @extend %flex-col-all-center;
   margin-top: 15px;
   gap: 10px;
 }
@@ -320,11 +429,13 @@ button {
 }
 
 .recommend-book-wrapper {
+  @extend %flex-col-all-center;
   height: 1275px;
-  background-color: rgb(240, 79, 35);
+  background-color: $point-color;
 }
 
 .recommend-book-guide-wrapper {
+  @extend %flex-col-all-center;
   color: white;
 }
 
@@ -341,7 +452,7 @@ button {
 }
 
 .recommend-book-story-text {
-  color: rgb(249, 185, 167);
+  color: $of-point-color;
   font-size: 15px;
   line-height: 25px;
   display: flex;
@@ -363,25 +474,31 @@ button {
 }
 
 .unique-transcription-wrapper {
+  @extend %flex-col-all-center;
   height: 900px;
 }
 
 .relay-board-open-notice {
+  @extend %background-image-no-repeat-center-cover;
   height: 600px;
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("https://cdn.imweb.me/thumbnail/20240326/0097dcac1308f.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://cdn.imweb.me/thumbnail/20240326/0097dcac1308f.jpg");
 }
 
 .relay-board {
+  @extend %flex-col-all-center;
   height: 925px;
   padding-bottom: 150px;
 }
 
 .relay-board-guide {
+  @extend %general-section-padding-left;
+  @extend %general-section-padding-top;
   color: white;
 }
 
 .relay-board-description-text {
-  color: rgb(240, 79, 35);
+  color: $point-color;
 }
 
 .relay-board-post-list {
@@ -393,10 +510,13 @@ button {
 }
 
 .relay-board-post-inner-book-info-wrapper {
+  @extend %flex-col-all-center;
   margin-top: 50px;
 }
 
 .reading-discussion-wrapper {
+  @extend %general-section-padding-left;
+  @extend %background-image-no-repeat-center-cover;
   height: 470px;
   padding-top: 130px;
   background-image: url("https://cdn.imweb.me/thumbnail/20240325/adfa938ff7cda.jpg");
@@ -413,14 +533,20 @@ button {
 }
 
 .unique-transcription-post-img-1 {
+  @extend %background-image-no-repeat-center-cover;
+  @extend %unique-transcription-post;
   background-image: url("https://cdn.imweb.me/thumbnail/20240326/afe08fe1a7b12.jpg");
 }
 
 .unique-transcription-post-img-2 {
+  @extend %background-image-no-repeat-center-cover;
+  @extend %unique-transcription-post;
   background-image: url("https://cdn.imweb.me/thumbnail/20240326/c9abd8c709ebd.jpg");
 }
 
 .unique-transcription-post-img-3 {
+  @extend %background-image-no-repeat-center-cover;
+  @extend %unique-transcription-post;
   background-image: url("https://cdn.imweb.me/thumbnail/20240326/c6708b5a1e03c.jpg");
 }
 
@@ -493,7 +619,7 @@ button {
 .recommend-book-content-wrapper {
   height: 500px;
   width: 100%;
-  max-width: 1350px;
+  max-width: $max-background-width;
   display: flex;
   justify-content: space-between;
   margin-bottom: 30px;
@@ -519,7 +645,7 @@ button {
   height: 380px;
   padding: 25px;
   padding-top: 45px;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: $half-white-color;
 }
 
 .translucent-point-color-bg {
@@ -527,7 +653,11 @@ button {
   height: 100%;
   opacity: 0%;
   transition: 0.3s;
-  background: linear-gradient(rgba(240, 79, 35, 0.45), rgba(240, 79, 35, 0.45));
+  background: linear-gradient(
+    $translucent-point-color,
+    $translucent-point-color
+  );
+
   display: flex;
   align-items: flex-end;
 }
@@ -541,6 +671,7 @@ button {
 /* ****************************
     Text
 **************************** */
+
 .company-name-text {
   cursor: pointer;
   font-size: 35px;
@@ -572,7 +703,7 @@ button {
 }
 
 .community-guide-title-text {
-  color: rgb(240, 79, 35);
+  color: $point-color;
   font-size: 40px;
   font-weight: 330;
   margin: 10px;
@@ -592,11 +723,11 @@ button {
 }
 
 .recommend-book-title-text {
-  color: rgb(240, 79, 35);
+  color: $point-color;
   font-size: 35px;
   font-weight: 800;
   letter-spacing: 3px;
-  background-color: rgb(252, 248, 241);
+  background-color: $base-color;
   padding-top: 7px;
   padding-left: 10px;
   padding-right: 10px;
@@ -611,16 +742,16 @@ button {
 }
 
 .recommend-book-title {
-  color: rgb(252, 248, 241);
+  color: $base-color;
 }
 
 .recommend-book-author {
   font-size: 15px;
-  color: rgb(249, 185, 167);
+  color: $of-point-color;
 }
 
 .relay-board-guide-subtitle-text {
-  color: rgb(229, 231, 235);
+  color: $of-white-color;
   font-size: 20px;
 }
 
@@ -631,13 +762,13 @@ button {
 }
 
 .relay-board-guide-description-text {
-  color: rgb(229, 231, 235);
+  color: $of-white-color;
   font-weight: 300;
   line-height: 25px;
 }
 
 .relay-board-post-story-text {
-  color: rgb(240, 79, 35);
+  color: $point-color;
   line-height: 24px;
 }
 
@@ -645,23 +776,23 @@ button {
   font-weight: 600;
   margin-top: 8px;
   font-size: 15px;
-  color: rgb(119, 119, 119);
+  color: $gray-color;
 }
 
 .relay-board-post-author-name {
-  color: rgb(119, 119, 119);
+  color: $gray-color;
   font-size: 14px;
   text-align: center;
 }
 
 .reading-discussion-title-text {
-  color: rgb(252, 248, 241);
+  color: $base-color;
   font-size: 47px;
   line-height: 50px;
 }
 
 .reading-discussion-description-text {
-  color: rgb(252, 248, 241);
+  color: $base-color;
   font-size: 18px;
 }
 
@@ -670,7 +801,7 @@ button {
 }
 
 .unique-transcription-description-text {
-  color: rgb(240, 79, 35);
+  color: $point-color;
 }
 
 .unique-transcription-post-overlay-text {
@@ -691,6 +822,7 @@ button {
     Button
 **************************** */
 .community-guide-button {
+  @extend %btn-ghost-point;
   padding-top: 18px;
   padding-bottom: 18px;
   padding-left: 50px;
@@ -698,8 +830,22 @@ button {
 }
 
 .relay-board-guide-link-button {
+  @extend %button-general-padding;
+  @extend %btn-solid-point;
   font-size: 15px;
   font-weight: 300;
+}
+
+.unique-transcription-link-button {
+  @extend %button-general-padding;
+  @extend %btn-ghost-point;
+  @extend %small-btn-text;
+}
+
+.relay-board-link-button {
+  @extend %button-general-padding;
+  @extend %btn-ghost-point;
+  @extend %small-btn-text;
 }
 
 /* ****************************
@@ -729,59 +875,72 @@ button {
 
 @media (min-width: 320px) and (max-width: 960px) {
   /* ****************************
-      Utility class 
-  **************************** */
+        Utility class 
+    **************************** */
   .mobile-only-view {
     display: block;
   }
+
   .pc-only-view {
     display: none;
   }
+
   /* ****************************
-      Global Extend
-  **************************** */
-  .relay-board-guide, .reading-discussion-wrapper {
+        Global Extend
+    **************************** */
+  %general-section-padding-left {
     padding-left: 15px;
   }
-  .relay-board-guide {
+
+  %general-section-padding-top {
     padding-top: 60px;
   }
-  .unique-transcription-post-img-1, .unique-transcription-post-img-2, .unique-transcription-post-img-3 {
+
+  %unique-transcription-post {
     height: 110px;
   }
-  .unique-transcription-link-button, .relay-board-link-button {
+
+  %small-btn-text {
     font-size: 12px;
   }
+
   /* ****************************
-      Header, Footer
-  **************************** */
+        Header, Footer
+    **************************** */
   .mobile-header {
     width: 100%;
     height: 50px;
-    background-color: rgb(252, 248, 241);
-    color: rgb(240, 79, 35);
+
+    background-color: $base-color;
+    color: $point-color;
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     padding-left: 10px;
     padding-right: 10px;
   }
+
   .company-name-wrapper {
     padding-top: 5px;
   }
+
   .community-guide-title-wrapper {
     width: 240px;
   }
+
   .footer-company-info-wrapper {
     padding-top: 30px;
     padding-left: 14px;
   }
+
   /* ****************************
-      Layout
-  **************************** */
+        Layout
+    **************************** */
   .horizon-block-area {
     height: 25px;
   }
+
   .slogen-wrapper {
     height: 330px;
     background-image: url("https://cdn.imweb.me/thumbnail/20240403/51d643077bbf7.jpg");
@@ -789,56 +948,69 @@ button {
     padding-left: 15px;
     padding-top: 10px;
   }
+
   .slogen-title-text-wrapper {
     align-items: flex-start;
     gap: 5px;
   }
+
   .slogen-detail-text-wrapper {
     margin-top: 13px;
     align-items: flex-start;
     gap: 7px;
   }
+
   .community-guide-wrapper {
     height: 260px;
     padding-bottom: 30px;
   }
+
   .community-guide-detail-wrapper {
     margin: 1px;
     margin-top: 10px;
     gap: 5px;
   }
+
   .community-button-wrapper {
     margin-top: 15px;
   }
+
   .recommend-book-wrapper {
     width: 100%;
     height: 1100px;
     display: flex;
     align-items: center;
   }
+
   .recommend-book-guide-title-wrapper {
     width: 100%;
     margin-top: 20px;
     display: flex;
     justify-content: center;
   }
+
   .recommend-book-list-slider {
     margin-top: 50px;
     margin-bottom: 0px;
   }
+
   .unique-transcription-wrapper {
     height: 515px;
   }
+
   .relay-board-open-notice {
     height: 340px;
     background: url("https://cdn.imweb.me/thumbnail/20240402/db19d0a155787.jpg");
+
     background-size: 750px;
     background-position-y: -50px;
   }
+
   .relay-board {
     height: 1470px;
     padding-bottom: 70px;
   }
+
   .relay-board-post-list {
     width: 95%;
     display: flex;
@@ -846,146 +1018,182 @@ button {
     align-items: center;
     gap: 20px;
   }
+
   .relay-board-post-inner-book-info-wrapper {
     margin-top: 25px;
   }
+
   .unique-transcription-post-list {
     gap: 7px;
     padding-left: 4px;
     padding-right: 4px;
   }
+
   .unique-transcription-post-img-1 {
     background-image: url("https://cdn.imweb.me/thumbnail/20240326/afe08fe1a7b12.jpg");
   }
+
   .unique-transcription-post-img-2 {
     background-image: url("https://cdn.imweb.me/thumbnail/20240326/c9abd8c709ebd.jpg");
   }
+
   .unique-transcription-post-img-3 {
     background-image: url("https://cdn.imweb.me/thumbnail/20240326/c6708b5a1e03c.jpg");
   }
+
   .reading-discussion-wrapper {
     width: 100%;
     height: 290px;
     padding-top: 50px;
     background-image: url("https://cdn.imweb.me/thumbnail/20240402/f5148c97f43eb.jpg");
   }
+
   .reading-discussion-title-wrapper {
     margin-bottom: 20px;
   }
+
   .reading-discussion-arrow-wrapper {
     grid-template-columns: 1fr 90px;
     padding-top: 60px;
   }
+
   .recommend-book-content-wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .recommend-book-title-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0;
   }
+
   .recommend-book-story-text-mobile-wrapper {
     width: 100%;
     padding-left: 15px;
     padding-right: 15px;
   }
+
   .recommend-book-description-wrapper {
     width: 100%;
     gap: 0px;
     padding: 0;
     margin-top: 40px;
   }
+
   .recommend-book-title-and-author-kr-wrapper {
     align-items: center;
     gap: 0;
     margin-top: 20px;
   }
+
   .recommend-book-link-wrapper {
     width: 200px;
     margin-top: 25px;
     margin-bottom: 45px;
   }
+
   .recommend-book-list-unit-wrapper {
     margin-left: 3px;
     margin-right: 3px;
   }
+
   .recommend-book-unit-title-and-author-wrapper {
     margin-top: 10px;
   }
+
   .relay-board-guide-title-wrapper {
     margin-top: 8px;
     margin-bottom: 15px;
   }
+
   .relay-board-guide-link-button-wrapper {
     margin-top: 30px;
   }
+
   .unique-transcription-description-wrapper {
     margin-top: 20px;
     margin-bottom: 25px;
   }
+
   .unique-transcription-link-button-wrapper {
     margin-top: 15px;
     margin-bottom: 30px;
   }
+
   .relay-board-post {
     width: 100%;
     max-width: 100%;
     height: 260px;
     padding: 20px;
   }
+
   .relay-board-description-wrapper {
     margin-bottom: 20px;
   }
+
   .relay-board-link-button-wrapper {
     margin-top: 15px;
     margin-bottom: 35px;
   }
+
   /* ****************************
-      Text
-  **************************** */
+        Text
+    **************************** */
+
   .company-name-text {
     font-size: 22px;
     letter-spacing: 3px;
   }
+
   .recommend-book-story-text {
     font-size: 13px;
     font-weight: 300;
     width: 100%;
   }
+
   .general-section-title-text {
     font-size: 26px;
     font-weight: 600;
   }
+
   .slogen-title-text {
     font-size: 30px;
   }
+
   .slogen-title-text > p {
     margin: 0;
   }
+
   .slogen-detail-text {
     font-size: 14px;
   }
+
   .community-guide-title-text {
     font-size: 27px;
     text-align: center;
   }
+
   .community-guide-detail-text {
     font-size: 14px;
   }
+
   .recommend-book-guide-text {
     font-size: 14px;
     font-weight: 400;
   }
+
   .mobile-text-bold-no-apply {
     font-weight: 400;
   }
+
   .recommend-book-guide-title-text {
     font-size: 27px;
   }
+
   .recommend-book-title-text {
     font-size: 25px;
     letter-spacing: 1px;
@@ -994,103 +1202,128 @@ button {
     padding-right: 7px;
     text-transform: uppercase;
   }
-  .recommend-book-title-kr-text, .recommend-book-author-kr-text {
+
+  .recommend-book-title-kr-text,
+  .recommend-book-author-kr-text {
     font-size: 15px;
   }
+
   .recommend-book-title {
     font-size: 13px;
     line-height: 18px;
   }
+
   .recommend-book-author {
     font-size: 12px;
   }
+
   .relay-board-guide-subtitle-text {
     font-size: 17px;
   }
+
   .relay-board-guide-title-text {
     font-size: 27px;
     line-height: 37px;
   }
+
   .relay-board-guide-description-text {
     font-size: 13px;
   }
+
   .unique-transcription-description-text {
     font-size: 14px;
   }
+
   .relay-board-description-text {
     font-size: 14px;
   }
+
   .relay-board-post-story-text {
     font-size: 14px;
     text-align: center;
   }
+
   .relay-board-post-book-name {
     font-size: 12px;
   }
+
   .relay-board-post-author-name {
     font-size: 11px;
   }
+
   .reading-discussion-title-text {
     font-size: 25px;
     line-height: 30px;
   }
+
   .reading-discussion-description-text {
     font-size: 12px;
   }
+
   /* ****************************
-      Button
-  **************************** */
+        Button
+    **************************** */
+
   .community-guide-button {
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 12px;
     padding-bottom: 12px;
   }
+
   .community-guide-button-text {
     font-size: 13px;
     width: 100%;
   }
+
   .relay-board-guide-link-button {
     font-size: 12px;
   }
+
   .button-general-padding {
     padding-top: 12px;
     padding-bottom: 12px;
   }
+
   /* ****************************
-      IMG
-  **************************** */
+        IMG
+    **************************** */
   .recommend-book-list-img {
     width: 180px;
   }
+
   .unique-transcription-icon {
     height: 40px;
   }
+
   .relay-board-post-img {
     height: 85px;
   }
+
   .reading-discussion-arrow-img {
     width: 60px;
   }
+
   /* ****************************
-      SVG
-  **************************** */
+        SVG
+    **************************** */
   .menu-side-bar-opener-btn {
     width: 25px;
   }
+
   .page-search-btn {
     width: 20px;
   }
+
   /* ****************************
-      ETC
-  **************************** */
+        ETC
+    **************************** */
+
   .hr-between-unique-tr-relay-board {
     width: 93%;
     height: 1px;
     border: 0;
-    background-color: rgb(240, 79, 35);
+    background-color: $point-color;
     size: 1px;
   }
 }
-
-/*# sourceMappingURL=index.css.map */
